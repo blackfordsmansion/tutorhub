@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="science-bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Science - TutorHub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="science-bg">
+  <header>
+    <h1>Science - TutorHub</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="math.html">Math</a>
+      <a href="english.html">English</a>
+      <a href="languages.html">Languages</a>
+      <a href="science.html">Science</a>
+      <a href="history.html">History</a>
+    </nav>
+  </header>
+
+
+  <main>
+    <section class="grade-section">
+      <div class="grade-label" id="gradeLabel">Grade</div>
+      <input
+        type="range"
+        id="gradeSlider"
+        min="0"
+        max="8"
+        value="0"
+        class="grade-slider"
+      />
+      <div class="curriculum" id="curriculumText"></div>
+    </section>
+
+
+    <a href="index.html" class="back-home-btn">Back to Home</a>
+  </main>
+
+
+  <footer>
+    <p>&copy; 2025 TutorHub. All rights reserved.</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+  <script>
+    const scienceCurriculum = {
+      0: 'Kindergarten: The five senses, animal habitats',
+      1: 'Grade 1: The water cycle, plant and animal life cycles',
+      2: 'Grade 2: Weather patterns, matter (solids, liquids, gases)',
+      3: 'Grade 3: Food chains, solar system, simple machines',
+      4: 'Grade 4: Electricity, magnetism, human body systems',
+      5: 'Grade 5: Cell structure, ecosystems, Earth’s geology',
+      6: 'Grade 6: Physics: forces, motion, and energy',
+      7: 'Grade 7: Chemistry: atomic structure, periodic table',
+      8: 'Grade 8: Biology: genetics, evolution, ecology'
+    };
+    setupCurriculumSlider(scienceCurriculum);
+  </script>
+</body>
+</html>

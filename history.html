@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="history-bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>History - TutorHub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="history-bg">
+  <header>
+    <h1>History - TutorHub</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="math.html">Math</a>
+      <a href="english.html">English</a>
+      <a href="languages.html">Languages</a>
+      <a href="science.html">Science</a>
+      <a href="history.html">History</a>
+    </nav>
+  </header>
+
+
+  <main>
+    <section class="grade-section">
+      <div class="grade-label" id="gradeLabel">Grade</div>
+      <input
+        type="range"
+        id="gradeSlider"
+        min="0"
+        max="8"
+        value="0"
+        class="grade-slider"
+      />
+      <div class="curriculum" id="curriculumText"></div>
+    </section>
+
+
+    <a href="index.html" class="back-home-btn">Back to Home</a>
+  </main>
+
+
+  <footer>
+    <p>&copy; 2025 TutorHub. All rights reserved.</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+  <script>
+    const historyCurriculum = {
+      0: 'Kindergarten: My family and my community',
+      1: 'Grade 1: Community helpers and holidays',
+      2: 'Grade 2: American history heroes and symbols',
+      3: 'Grade 3: Local and state history',
+      4: 'Grade 4: US geography and regions',
+      5: 'Grade 5: American history from colonization to the Civil War',
+      6: 'Grade 6: Ancient civilizations: Egypt, Greece, Rome',
+      7: 'Grade 7: World history: Middle Ages, Renaissance, Reformation',
+      8: 'Grade 8: American history from Reconstruction to the present'
+    };
+    setupCurriculumSlider(historyCurriculum);
+  </script>
+</body>
+</html>
