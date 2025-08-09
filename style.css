@@ -1,4 +1,4 @@
-﻿/* General styles */
+/* General styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -7,7 +7,7 @@ body {
   line-height: 1.6;
 }
 header {
-  background: #42f5c8; /* Changed to solid light teal */
+  background: #90deda; /* Changed to solid #90deda */
   color: white;
   padding: 1.5rem 2rem;
   text-align: center;
@@ -20,11 +20,9 @@ header {
   align-items: center;
 }
 
-
 header h1 {
   margin-bottom: 0.5rem;
 }
-
 
 nav {
   background: transparent;
@@ -44,7 +42,6 @@ nav a:hover {
   text-decoration: underline;
 }
 
-
 footer {
   text-align: center;
   padding: 1.8rem 1rem;
@@ -52,7 +49,6 @@ footer {
   color: #00382baa;
   user-select: none;
 }
-
 
 /* Highlight boxes (home page sections) */
 .highlight-box {
@@ -76,7 +72,6 @@ footer {
 .payment-section ul li {
   margin-bottom: 0.8rem;
 }
-
 
 .subjects-grid {
   display: grid;
@@ -129,7 +124,6 @@ footer {
   text-decoration: underline;
 }
 
-
 /* Join Now button styling */
 .join-now-btn {
   display: block;
@@ -152,18 +146,15 @@ footer {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
-
 @media (max-width: 600px) {
   .subjects-grid {
     grid-template-columns: 1fr;
   }
 
-
   .highlight-box {
     padding: 2rem 1.8rem;
     margin: 2.5rem 1rem;
   }
-
 
   .subject-card {
     padding: 2rem 1.5rem;
@@ -171,12 +162,10 @@ footer {
   }
 }
 
-
 /* All nav links are now white */
 .nav-home, .nav-math, .nav-english, .nav-languages, .nav-science, .nav-history {
   color: white;
 }
-
 
 /* Subject pages styling */
 body.math-bg,
@@ -239,7 +228,6 @@ body.history-bg {
   background-color: #00382b;
 }
 
-
 /* Subject backgrounds */
 .math-bg {
   background: #f27674;
@@ -256,3 +244,5 @@ body.history-bg {
 .history-bg {
   background: #d790de;
 }
+
+
