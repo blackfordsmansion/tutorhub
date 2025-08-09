@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="languages-bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Languages - TutorHub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="languages-bg">
+  <header>
+    <h1>Languages - TutorHub</h1>
+    <nav>
+      <a href="index.html" class="nav-home">Home</a>
+      <a href="math.html" class="nav-math">Math</a>
+      <a href="english.html" class="nav-english">English</a>
+      <a href="languages.html" class="nav-languages">Languages</a>
+      <a href="science.html" class="nav-science">Science</a>
+      <a href="history.html" class="nav-history">History</a>
+    </nav>
+  </header>
+
+
+  <main>
+    <section class="grade-section">
+      <div class="grade-label" id="gradeLabel">Grade</div>
+      <input
+        type="range"
+        id="gradeSlider"
+        min="0"
+        max="8"
+        value="0"
+        class="grade-slider"
+      />
+      <div class="curriculum" id="curriculumText"></div>
+    </section>
+
+
+    <a href="index.html" class="back-home-btn">Back to Home</a>
+  </main>
+
+
+  <footer>
+    <p>&copy; 2025 TutorHub. All rights reserved.</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+  <script>
+    const languagesCurriculum = {
+      0: 'Kindergarten: Basic greetings and simple words',
+      1: 'Grade 1: Numbers, colors, and common phrases',
+      2: 'Grade 2: Simple sentences and verb conjugation',
+      3: 'Grade 3: Expanded vocabulary and conversational skills',
+      4: 'Grade 4: Present tense, basic grammar rules',
+      5: 'Grade 5: Past and future tense, cultural topics',
+      6: 'Grade 6: Intermediate grammar, short story writing',
+      7: 'Grade 7: Dialogue practice, reading simple texts',
+      8: 'Grade 8: Complex sentence structures, cultural traditions'
+    };
+    setupCurriculumSlider(languagesCurriculum);
+  </script>
+</body>
+</html>
