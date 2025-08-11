@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="math-bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Math - TutorHub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="math-bg">
+  <header>
+    <h1>Math - TutorHub</h1>
+    <nav>
+      <a href="index.html" class="nav-home">Home</a>
+      <a href="math.html" class="nav-math">Math</a>
+      <a href="english.html" class="nav-english">English</a>
+      <a href="science.html" class="nav-science">Science</a>
+      <a href="chess.html" class="nav-chess">Chess</a>
+    </nav>
+  </header>
+
+
+  <main>
+    <section class="grade-section">
+      <div class="grade-label" id="gradeLabel">Grade</div>
+      <input
+        type="range"
+        id="gradeSlider"
+        min="0"
+        max="8"
+        value="0"
+        class="grade-slider"
+      />
+      <div class="curriculum" id="curriculumText"></div>
+    </section>
+
+
+    <a href="index.html" class="back-home-btn">Back to Home</a>
+  </main>
+
+
+  <footer>
+    <p>&copy; 2025 TutorHub. All rights reserved.</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+  <script>
+    const mathCurriculum = {
+      0: 'Kindergarten: Counting, number recognition (1-10)',
+      1: 'Grade 1: Addition, subtraction, basic shapes',
+      2: 'Grade 2: Time, money, two-digit operations',
+      3: 'Grade 3: Multiplication, division, fractions',
+      4: 'Grade 4: Decimals, long division, geometry basics',
+      5: 'Grade 5: Advanced fractions, pre-algebra concepts',
+      6: 'Grade 6: Ratios, percentages, expressions',
+      7: 'Grade 7: Equations, inequalities, proportional relationships',
+      8: 'Grade 8: Functions, scientific notation, Pythagorean theorem'
+    };
+    setupCurriculumSlider(mathCurriculum);
+  </script>
+</body>
+</html>

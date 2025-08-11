@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="english-bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>English - TutorHub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="english-bg">
+  <header>
+    <h1>English - TutorHub</h1>
+    <nav>
+      <a href="index.html" class="nav-home">Home</a>
+      <a href="math.html" class="nav-math">Math</a>
+      <a href="english.html" class="nav-english">English</a>
+      <a href="science.html" class="nav-science">Science</a>
+      <a href="chess.html" class="nav-chess">Chess</a>
+    </nav>
+  </header>
+
+
+  <main>
+    <section class="grade-section">
+      <div class="grade-label" id="gradeLabel">Grade</div>
+      <input
+        type="range"
+        id="gradeSlider"
+        min="0"
+        max="8"
+        value="0"
+        class="grade-slider"
+      />
+      <div class="curriculum" id="curriculumText"></div>
+    </section>
+
+
+    <a href="index.html" class="back-home-btn">Back to Home</a>
+  </main>
+
+
+  <footer>
+    <p>&copy; 2025 TutorHub. All rights reserved.</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+  <script>
+    const englishCurriculum = {
+      0: 'Kindergarten: Alphabet, basic phonics, simple words',
+      1: 'Grade 1: Simple sentences, reading comprehension',
+      2: 'Grade 2: Grammar basics, vocabulary building',
+      3: 'Grade 3: Reading fluency, writing paragraphs',
+      4: 'Grade 4: Advanced grammar, story writing',
+      5: 'Grade 5: Literature introduction, essay writing',
+      6: 'Grade 6: Critical reading, research skills',
+      7: 'Grade 7: Writing styles, literary analysis',
+      8: 'Grade 8: Argumentative writing, advanced grammar'
+    };
+    setupCurriculumSlider(englishCurriculum);
+  </script>
+</body>
+</html>
