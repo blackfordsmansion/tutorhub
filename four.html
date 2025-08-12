@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,41 +7,8 @@
     <!-- Tailwind CSS for styling and Inter font -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* Light gray background */
-        }
-        .form-container {
-            max-width: 640px; /* Max width for readability */
-            background-color: white;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            border-radius: 1rem;
-            padding: 2rem;
-        }
-        .form-title {
-            color: #09b5b5; /* Primary color */
-        }
-        .form-label {
-            color: #1f2937; /* Dark gray for labels */
-        }
-        .form-input, .form-textarea, .form-select {
-            border-color: #d1d5db; /* Light gray border */
-            transition: border-color 0.2s, box-shadow 0.2s;
-        }
-        .form-input:focus, .form-textarea:focus, .form-select:focus {
-            border-color: #09b5b5;
-            box-shadow: 0 0 0 2px rgba(9, 181, 181, 0.5);
-            outline: none;
-        }
-        .form-button {
-            background-color: #09b5b5;
-            transition: background-color 0.2s;
-        }
-        .form-button:hover {
-            background-color: #079c9c;
-        }
-    </style>
+    <!-- Link to the separate CSS file -->
+    <link rel="stylesheet" href="four.css">
 </head>
 <body class="flex items-center justify-center min-h-screen p-4">
     <div class="form-container w-full">
@@ -51,9 +18,7 @@
             <p>This form uses the `mailto:` function. When you submit, a new email draft will open in your computer's default mail client. You must manually click 'Send' for the request to be delivered. The form data will be placed in the body of the email.</p>
         </div>
 
-
-        <form id="tutoring-form" class="space-y-6" onsubmit="handleMailtoSubmission(event, 'your-email@example.com')">
-
+        <form id="tutoring-form" class="space-y-6" onsubmit="handleMailtoSubmission(event)">
 
             <!-- Name Field -->
             <div>
@@ -62,14 +27,12 @@
                        class="form-input w-full p-2.5 rounded-md border-2 focus:ring-0">
             </div>
 
-
             <!-- Email Field -->
             <div>
                 <label for="email" class="form-label block text-sm font-medium mb-1">Email Address</label>
                 <input type="email" id="email" name="Email" required
                        class="form-input w-full p-2.5 rounded-md border-2 focus:ring-0">
             </div>
-
 
             <!-- Phone Number Field -->
             <div>
@@ -78,14 +41,12 @@
                        class="form-input w-full p-2.5 rounded-md border-2 focus:ring-0">
             </div>
 
-
             <!-- Parent/Guardian Name Field -->
             <div>
                 <label for="parent-name" class="form-label block text-sm font-medium mb-1">Parent/Guardian Name</label>
                 <input type="text" id="parent-name" name="Parent/Guardian Name"
                        class="form-input w-full p-2.5 rounded-md border-2 focus:ring-0">
             </div>
-
 
             <!-- Student's Grade Level Dropdown -->
             <div>
@@ -105,7 +66,6 @@
                 </select>
             </div>
 
-
             <!-- Subject(s) of Interest Field -->
             <div>
                 <label for="subjects" class="form-label block text-sm font-medium mb-1">Subject(s) of Interest</label>
@@ -113,14 +73,12 @@
                        class="form-input w-full p-2.5 rounded-md border-2 focus:ring-0">
             </div>
 
-
             <!-- Tutoring Needs Textarea -->
             <div>
                 <label for="tutoring-needs" class="form-label block text-sm font-medium mb-1">Describe your tutoring needs</label>
                 <textarea id="tutoring-needs" name="Tutoring Needs" rows="4" required
                           class="form-textarea w-full p-2.5 rounded-md border-2 focus:ring-0"></textarea>
             </div>
-
 
             <!-- How did you hear about us? Radio Buttons -->
             <div>
@@ -145,7 +103,6 @@
                 </div>
             </div>
 
-
             <!-- Submit Button -->
             <button type="submit" id="submit-button"
                     class="form-button w-full text-white font-semibold py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#09b5b5]">
@@ -154,43 +111,7 @@
         </form>
     </div>
 
-
-    <script>
-        function handleMailtoSubmission(event, email) {
-            // Prevent the default form submission
-            event.preventDefault();
-            
-            const form = event.target;
-            const formData = new FormData(form);
-            const data = {};
-            
-            // Collect form data into a readable object
-            for (let [key, value] of formData.entries()) {
-                data[key] = value;
-            }
-
-
-            // Create a formatted string for the email body
-            let body = `Hello, a new tutoring request has been submitted.\n\n`;
-            for (let key in data) {
-                if (data.hasOwnProperty(key)) {
-                    body += `${key}: ${data[key]}\n`;
-                }
-            }
-            body += `\n- End of Submission -`;
-
-
-            // Encode the body for the mailto link
-            const encodedBody = encodeURIComponent(body);
-            const subject = encodeURIComponent('New Tutoring Request');
-            
-            // Construct the mailto URI
-            const mailtoUri = `mailto:${email}?subject=${subject}&body=${encodedBody}`;
-
-
-            // Open the mail client
-            window.location.href = mailtoUri;
-        }
-    </script>
+    <!-- Link to the separate JavaScript file -->
+    <script src="four.js"></script>
 </body>
 </html>
