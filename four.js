@@ -31,9 +31,10 @@ function handleMailtoSubmission(event) {
     
     // Construct the mailto URI
     // IMPORTANT: Replace 'your-email@example.com' with your actual email address.
-    const mailtoUri = `mailto:your-email@example.com?subject=${subject}&body=${encodedBody}`;
+    const mailtoUri = `mailto:tutorhubwork1@gmail.com?subject=${subject}&body=${encodedBody}`;
 
 
     // Open the mail client
     window.location.href = mailtoUri;
+
 }
