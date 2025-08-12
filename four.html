@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoring Request Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="four.css">
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="form-container w-full">
+        <h1 class="form-title text-3xl font-bold text-center mb-6">Tutoring Request Form</h1>
+
+
+        <form id="tutoring-form" action="send_form.php" method="POST" class="space-y-6">
+
+
+            <!-- Name -->
+            <div>
+                <label for="name" class="form-label block text-sm font-medium mb-1">Name</label>
+                <input type="text" id="name" name="name" required class="form-input w-full p-2.5 rounded-md border-2 focus:ring-0">
+            </div>
+
+
+            <!-- Email -->
+            <div>
+                <label for="email" class="form-label block text-sm font-medium mb-1">Email Address</label>
+                <input type="email" id="email" name="email" required class="form-input w-full p-2.5 rounded-md border-2 focus:ring-0">
+            </div>
+
+
+            <!-- Phone -->
+            <div>
+                <label for="phone" class="form-label block text-sm font-medium mb-1">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-input w-full p-2.5 rounded-md border-2 focus:ring-0">
+            </div>
+
+
+            <!-- Parent/Guardian -->
+            <div>
+                <label for="parent-name" class="form-label block text-sm font-medium mb-1">Parent/Guardian Name</label>
+                <input type="text" id="parent-name" name="parent_guardian" class="form-input w-full p-2.5 rounded-md border-2 focus:ring-0">
+            </div>
+
+
+            <!-- Grade -->
+            <div>
+                <label for="grade-level" class="form-label block text-sm font-medium mb-1">Student's Grade Level</label>
+                <select id="grade-level" name="grade" required class="form-select w-full p-2.5 rounded-md border-2 focus:ring-0 bg-white">
+                    <option value="">Choose...</option>
+                    <option value="Kindergarten">Kindergarten</option>
+                    <option value="1st Grade">1st Grade</option>
+                    <option value="2nd Grade">2nd Grade</option>
+                    <option value="3rd Grade">3rd Grade</option>
+                    <option value="4th Grade">4th Grade</option>
+                    <option value="5th Grade">5th Grade</option>
+                    <option value="6th Grade">6th Grade</option>
+                    <option value="7th Grade">7th Grade</option>
+                    <option value="8th Grade">8th Grade</option>
+                </select>
+            </div>
+
+
+            <!-- Subjects -->
+            <div>
+                <label for="subjects" class="form-label block text-sm font-medium mb-1">Subject(s) of Interest</label>
+                <input type="text" id="subjects" name="subjects" required class="form-input w-full p-2.5 rounded-md border-2 focus:ring-0">
+            </div>
+
+
+            <!-- Tutoring Needs -->
+            <div>
+                <label for="tutoring-needs" class="form-label block text-sm font-medium mb-1">Describe your tutoring needs</label>
+                <textarea id="tutoring-needs" name="needs" rows="4" required class="form-textarea w-full p-2.5 rounded-md border-2 focus:ring-0"></textarea>
+            </div>
+
+
+            <!-- How did you hear -->
+            <div>
+                <p class="form-label block text-sm font-medium mb-2">How did you hear about us?</p>
+                <div class="space-y-2">
+                    <label class="flex items-center">
+                        <input type="radio" name="referral" value="Social Media" class="h-4 w-4 text-[#09b5b5]">
+                        <span class="ml-2 text-sm">Social Media</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="referral" value="Friend/Family" class="h-4 w-4 text-[#09b5b5]">
+                        <span class="ml-2 text-sm">Friend/Family</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="referral" value="Search Engine" class="h-4 w-4 text-[#09b5b5]">
+                        <span class="ml-2 text-sm">Search Engine</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="referral" value="Other" class="h-4 w-4 text-[#09b5b5]">
+                        <span class="ml-2 text-sm">Other</span>
+                    </label>
+                </div>
+            </div>
+
+
+            <!-- Submit -->
+            <button type="submit" class="form-button w-full text-white font-semibold py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#09b5b5]">
+                Submit
+            </button>
+        </form>
+    </div>
+
+
+    <script src="four.js"></script>
+</body>
+</html>
