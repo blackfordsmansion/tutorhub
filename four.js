@@ -211,7 +211,7 @@
             const subject = encodeURIComponent('New Tutoring Request');
             
             // Construct the mailto URI
-            const mailtoUri = `mailto:${email}?subject=${subject}&body=${encodedBody}`;
+            const mailtoUri = `mailto:$tutorhubwork1@gmail.com?subject=${subject}&body=${encodedBody}`;
 
 
 
@@ -221,4 +221,5 @@
         }
     </script>
 </body>
+
 </html>
